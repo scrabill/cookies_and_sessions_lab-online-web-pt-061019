@@ -1,7 +1,13 @@
 <h1>Cart</h1>
 
-<form action="/add" method="post">
+<!-- <form action="/add" method="post">
   <label>Add Item</label><br>
   <input type="text" name="product"><br><br>
   <input type="submit" name="add to cart" value="add to cart">
-</form>
+</form> -->
+
+
+<%= form_tag("/add") do %>
+  Add Item: <%= text_field_tag "product" %><br>
+  <%= submit_tag "add to cart" %>
+<% end %>

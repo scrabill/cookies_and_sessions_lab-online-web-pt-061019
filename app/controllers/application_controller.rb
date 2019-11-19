@@ -8,15 +8,17 @@ class ApplicationController < ActionController::Base
     # this method should return an array of the items stored in
     # the cart (utilizing the Rails session method).
 
-    cart = []
+    # cart = []
+    #
+    # if session[:cart] == nil
+    #   # create a cart
+    #   session[:cart] = cart
+    # else
+    #   # return the existing cart
+    #   session[:cart]
+    # end
 
-    if session[:cart] == nil
-      # create a cart
-      session[:cart] = cart
-    else
-      # return the existing cart
-      session[:cart]
-    end
+    session[:cart] ||= []
 
   end
 end

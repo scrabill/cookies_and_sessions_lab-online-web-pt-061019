@@ -3,8 +3,10 @@ class ProductsController < ApplicationController
 
   end
 
-  def create
+  def add
     # raise params
     session[:cart] << params[:product]
+    # cart << params[:product]
+    render :index
   end
 end
