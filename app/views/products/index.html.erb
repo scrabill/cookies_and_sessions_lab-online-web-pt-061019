@@ -7,7 +7,13 @@
 </form> -->
 
 
-<%= form_tag("/add") do %>
+<%= form_tag("/") do %>
   Add Item: <%= text_field_tag "product" %><br>
   <%= submit_tag "add to cart" %>
+<% end %>
+
+<h2>Items</h2>
+
+<% cart.each do |c| %>
+<%= c %>
 <% end %>
